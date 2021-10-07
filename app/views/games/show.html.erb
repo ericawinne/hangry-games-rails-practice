@@ -1,0 +1,12 @@
+<h1> Game Name: </h1>
+
+<div>
+  <h2><%= @game.name %></h2>
+  <h3>People who played in game: </h3>
+    <ul>
+      <% @game.people.each do |one_person| %>
+        <li><%= link_to one_person.name, one_person %></li>
+      <% end %>
+    </ul>
+</div>
+
